@@ -1,0 +1,168 @@
+/* app/globals.css */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ========================================================= */
+/* GLOBAL STYLES */
+/* ========================================================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Satoshi;
+  background-color: theme('colors.midnight-black'); /* The solid, deep background for everything */
+  color: #D3D3D3; /* Default text color against dark background */
+  min-height: 100vh;
+  overflow-x: hidden; /* Prevent horizontal scrollbar from blur */
+}
+
+/* ========================================================= */
+/* MAIN BACKGROUND GRADIENT EFFECT */
+/* This section leverages the original template's structure for the background visual.
+ * The .main div acts as a fixed container for the .gradient.
+ * The .gradient itself generates the visual effect.
+ */
+.main {
+  width: 100vw;
+  min-height: 100vh;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  padding: 120px 24px 160px 24px;
+  pointer-events: none; /* Crucial: ensures it doesn't block clicks on content */
+  z-index: 0; /* Ensures it's behind all actual content */
+}
+
+/* This is the primary gradient effect element */
+.gradient {
+  height: fit-content; /* Original property, allows it to be sized by content or max-width */
+  z-index: 0; /* Relative to .main's z-index */
+  width: 100%;
+  max-width: 640px; /* Original property: constrains the visible area of the gradient */
+  
+  /* THIS IS THE CORE CHANGE: Redefine the radial gradients for your Void theme */
+  background-image:
+    radial-gradient(at 27% 37%, hsla(270, 80%, 30%, 0.4) 0px, transparent 50%), /* Deep Purple A */
+    radial-gradient(at 97% 21%, hsla(240, 80%, 20%, 0.4) 0px, transparent 50%), /* Deep Blue-Purple B */
+    radial-gradient(at 52% 99%, hsla(120, 80%, 40%, 0.15) 0px, transparent 50%), /* Vibrant Green C */
+    radial-gradient(at 10% 29%, hsla(270, 70%, 20%, 0.3) 0px, transparent 50%), /* Darker Purple D */
+    radial-gradient(at 97% 96%, hsla(120, 70%, 30%, 0.1) 0px, transparent 50%), /* Subtle Green E */
+    radial-gradient(at 33% 50%, hsla(240, 70%, 30%, 0.25) 0px, transparent 50%), /* Mid Blue-Purple F */
+    radial-gradient(at 79% 53%, hsla(270, 60%, 25%, 0.2) 0px, transparent 50%); /* Another Dark Purple G */
+  
+  position: absolute;
+  content: ""; /* This property should technically only be on pseudo-elements, but it was in original code. Keeping it for now but noting it. */
+  height: 100%; /* Changed from fit-content to 100% to fill the main container */
+  filter: blur(150px) saturate(180%); /* Increased blur and saturation for more intense glow */
+  top: 80px; /* Original property: positioning */
+  opacity: 0.35; /* Increased overall opacity for better visibility */
+  pointer-events: none; /* Inherited from .main, but explicit here */
+}
+
+@media screen and (max-width: 640px) {
+  .main {
+    padding: 0;
+  }
+}
+
+
+
+/* ========================================================= */
+/* APP CONTENT LAYOUT - Restore original Tailwind classes where possible */
+/* ========================================================= */
+
+.app {
+  @apply relative z-10 flex justify-center items-center flex-col max-w-7xl mx-auto sm:px-16 px-6;
+}
+
+/* ========================================================= */
+/* COMPONENT STYLES (ADAPTED FOR VOID THEME) */
+/* ========================================================= */
+
+.black_btn {
+  @apply rounded-full border border-primary-green bg-primary-green py-1.5 px-5 text-midnight-black transition-all hover:bg-white hover:text-primary-green text-center text-sm font-inter flex items-center justify-center;
+}
+
+.outline_btn {
+  @apply rounded-full border border-primary-green bg-transparent py-1.5 px-5 text-primary-green transition-all hover:bg-primary-green hover:text-midnight-black text-center text-sm font-inter flex items-center justify-center;
+}
+
+.head_text {
+  @apply mt-5 text-5xl font-extrabold text-white leading-[1.15] sm:text-6xl;
+}
+
+.orange_gradient { /* Now used for your green accent */
+  @apply bg-gradient-to-r from-primary-green to-secondary-green bg-clip-text text-transparent;
+}
+
+.green_gradient { /* You can use this for other green gradients if needed, or remove */
+  @apply bg-gradient-to-r from-green-400 to-green-500 bg-clip-text text-transparent;
+}
+
+.tag_button {
+  @apply px-3 py-1 rounded-full bg-primary-green/[0.2] text-primary-green text-xs font-semibold cursor-pointer hover:bg-primary-green/[0.3] transition-colors;
+}
+
+.blue_gradient {
+  @apply bg-gradient-to-r from-cyan-300 to-cyan-400 bg-clip-text text-transparent;
+}
+
+.desc {
+  @apply mt-5 text-lg text-gray-400 sm:text-xl max-w-2xl;
+}
+
+.search_input {
+  @apply block w-full rounded-md border border-gray-700 bg-white/[0.05] py-2.5 font-satoshi pl-5 pr-12 text-sm shadow-lg font-medium focus:border-primary-green focus:outline-none focus:ring-0 text-gray-300;
+}
+
+.copy_btn {
+  @apply w-7 h-7 rounded-full bg-white/[0.05] shadow-[inset_0px_0px_5px_rgba(255,255,255,0.1)] backdrop-blur flex justify-center items-center cursor-pointer;
+}
+
+.glassmorphism {
+  @apply rounded-xl border border-gray-700 bg-white/[0.08] shadow-lg backdrop-blur-xl p-5;
+}
+
+.prompt_card { /* Ensure this is IntelligenceCard's class if renamed */
+  @apply flex-1 break-inside-avoid rounded-lg border border-gray-700 bg-white/[0.08] bg-clip-padding p-6 pb-4 backdrop-blur-lg backdrop-filter md:w-[360px] w-full h-fit;
+}
+
+.flex-center { @apply flex justify-center items-center; }
+.flex-start { @apply flex justify-start items-start; }
+.flex-end { @apply flex justify-end items-center; }
+.flex-between { @apply flex justify-between items-center; }
+
+.feed {
+  @apply mt-16 mx-auto w-full max-w-xl flex justify-center items-center flex-col gap-2;
+}
+
+.form_textarea {
+  @apply w-full flex rounded-lg h-[200px] mt-2 p-3 text-sm text-gray-300 outline-0 bg-white/[0.05] border border-gray-700;
+}
+
+.form_input {
+  @apply w-full flex rounded-lg mt-2 p-3 text-sm text-gray-300 outline-0 bg-white/[0.05] border border-gray-700;
+}
+
+.logo_text {
+  @apply max-sm:hidden font-satoshi font-semibold text-lg text-white tracking-wide;
+}
+
+.dropdown {
+  @apply absolute right-0 top-full mt-3 w-full p-5 rounded-lg bg-midnight-black/[0.9] min-w-[210px] flex flex-col gap-2 justify-end items-end border border-gray-700;
+}
+
+.dropdown_link {
+  @apply text-sm font-inter text-gray-300 hover:text-primary-green font-medium;
+}
