@@ -1,6 +1,6 @@
 ![logo](https://github.com/user-attachments/assets/b0d30319-1189-4a85-b1de-a78cac3bf9d2)
 
-# The Void (Cloud Intelligence Superstructure)
+# The Nerves (Cloud Intelligence Superstructure)
 
 
 
@@ -8,10 +8,10 @@ A global, open-source repository for the collection, distillation, and dissemina
 
 ## 🌟 Vision & Goal
 
-**The Void** transcends traditional information platforms by focusing on **"raw and distilled intelligence."** This means knowledge that has been refined to its most potent, useful core, offering profound insights and practical utility rather than casual or ephemeral content. It aims to be the definitive, publicly accessible, global superstructure for shared human knowledge.
+**The Nerves** transcends traditional information platforms by focusing on **"raw and distilled intelligence."** This means knowledge that has been refined to its most potent, useful core, offering profound insights and practical utility rather than casual or ephemeral content. It aims to be the definitive, publicly accessible, global superstructure for shared human knowledge.
 
 * **Any Form, Any Domain:** The platform is fundamentally agnostic to the type of intelligence (AI prompts, code snippets, documentation, recipes, scientific breakthroughs, etc.) and its domain, fostering cross-disciplinary learning.
-* **Collaborative Ecosystem:** Designed as an open and collaborative platform, "The Void" empowers anyone to contribute their unique insights, enriching a shared global knowledge base.
+* **Collaborative Ecosystem:** Designed as an open and collaborative platform, "The Nerves" empowers anyone to contribute their unique insights, enriching a shared global knowledge base.
 * **Profound & Actionable Value:** Prioritizing depth and utility, it serves as a go-to resource for individuals seeking to expand understanding, solve complex problems, and contribute meaningfully to collective intelligence.
 
 ## ✨ Features (Current & Planned)
@@ -35,7 +35,7 @@ A global, open-source repository for the collection, distillation, and dissemina
 
 ## 🛠️ Getting Started
 
-Follow these steps to get a local copy of "The Void" up and running on your machine.
+Follow these steps to get a local copy of "The Nerves" up and running on your machine.
 
 ### Prerequisites
 
@@ -46,8 +46,8 @@ Follow these steps to get a local copy of "The Void" up and running on your mach
 ### 1. Clone the Repository
 
 ```bash
-git clone [https://github.com/PokePiece/the_void.git](https://github.com/PokePiece/the_void.git)
-cd the_void
+git clone [https://github.com/PokePiece/the_Nerves.git](https://github.com/PokePiece/the_Nerves.git)
+cd the_Nerves
 2. Install Dependencies
 Bash
 
@@ -55,7 +55,7 @@ npm install
 # or
 yarn install
 3. Supabase Setup
-"The Void" uses Supabase for its backend. You'll need to set up a new Supabase project.
+"The Nerves" uses Supabase for its backend. You'll need to set up a new Supabase project.
 
 Create a Supabase Project:
 
@@ -177,7 +177,7 @@ yarn dev
 Open http://localhost:3000 in your browser to see the application.
 
 🤝 Contributing
-We welcome contributions to "The Void"! If you're interested in contributing:
+We welcome contributions to "The Nerves"! If you're interested in contributing:
 
 Fork the repository.
 
@@ -199,5 +199,5 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 📞 Contact
 Your Name/Handle: [Your GitHub Profile Link]
 
-Project GitHub: https://github.com/PokePiece/the_void
+Project GitHub: https://github.com/PokePiece/the_Nerves
 

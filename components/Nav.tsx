@@ -30,7 +30,7 @@ const Nav = () => {
       <nav className="flex-between w-full mb-16 pt-3">
         <Link href="/" className="flex gap-2 flex-center">
           <Image src="/assets/images/logo.svg" alt="The Void Logo" width={30} height={30} className="object-contain" />
-          <p className="logo_text">The Void</p>
+          <p className="logo_text">The Nerves</p>
         </Link>
         {/* Render a default state if authContext is unexpectedly null */}
         <div className="sm:flex hidden">
@@ -65,7 +65,7 @@ const Nav = () => {
           height={30}
           className="object-contain"
         />
-        <p className="logo_text">The Void</p>
+        <p className="logo_text">The Nerves</p>
       </Link>
 
       {/* Desktop Navigation */}

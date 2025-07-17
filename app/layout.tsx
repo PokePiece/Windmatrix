@@ -6,7 +6,7 @@ import Provider from '../components/Provider' // Assuming Provider is still need
 import { AuthProvider } from '../context/AuthContext';
 
 export const metadata = {
-    title: "The Void",
+    title: "The Nerves",
     description: "View & Deploy Crystallized Intelligence"
 }
 

@@ -9,30 +9,26 @@ import { useAuth } from '@/context/AuthContext'; // Ensure this points to your t
 // This path should be relative to your project root, assuming database.types.ts is there
 import type { Database } from '@/database.types';
 
-// Define the type for the error state to match Supabase's AuthError structure
-// Supabase AuthError typically has a 'message' property
+
 type AuthError = { message: string } | null;
 
-const AuthPage: React.FC = () => { // Type the functional component
-  // Typed State Variables
+const AuthPage: React.FC = () => { 
+
   const [email, setEmail] = useState<string>('');
   const [password, setPassword] = useState<string>('');
   const [username, setUsername] = useState<string>('');
   const [isSignUp, setIsSignUp] = useState<boolean>(false);
-  const [error, setError] = useState<AuthError>(null); // Use the AuthError type
+  const [error, setError] = useState<AuthError>(null); 
   const [loading, setLoading] = useState<boolean>(false);
   const [signupSuccess, setSignupSuccess] = useState<boolean>(false);
 
   const router = useRouter();
 
-  // Safely get user and loading from useAuth, handling potential null/undefined
   const authContext = useAuth();
 
-  // IMPORTANT: Ensure authContext is not null/undefined before destructuring.
-  // This check prevents the "type user and loading do not exist on type null" error.
+
   if (!authContext) {
-    // This scenario indicates AuthPage is rendered outside AuthProvider,
-    // or AuthContext is misconfigured. Log an error and prevent further rendering.
+
     console.error("AuthContext not provided. Ensure AuthPage is wrapped by AuthProvider.");
     return (
       <div className="w-full h-screen flex justify-center items-center text-xl text-red-500">
