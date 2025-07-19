@@ -5,8 +5,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useState, useEffect } from 'react'; // Keep useState, useEffect if used elsewhere for mobile menu
 import { useRouter } from 'next/navigation';
-import { useAuth } from '../context/AuthContext'; // Import useAuth
-import { supabase } from '../utils/supabase'; // Import supabase instance
+import { useAuth } from '@/context/AuthContext'; // Import useAuth
+import { supabase } from '@/utils/supabase'; // Import supabase instance
 import { User } from '@supabase/supabase-js'; // Import Supabase User type
 
 const Nav = () => {
@@ -30,7 +30,7 @@ const Nav = () => {
       <nav className="flex-between w-full mb-16 pt-3">
         <Link href="/" className="flex gap-2 flex-center">
           <Image src="/assets/images/logo.svg" alt="The Void Logo" width={30} height={30} className="object-contain" />
-          <p className="logo_text">The Nerves</p>
+          <p className="logo_text">The Bergs</p>
         </Link>
         {/* Render a default state if authContext is unexpectedly null */}
         <div className="sm:flex hidden">
@@ -65,7 +65,7 @@ const Nav = () => {
           height={30}
           className="object-contain"
         />
-        <p className="logo_text">The Nerves</p>
+        <p className="logo_text">The Bergs</p>
       </Link>
 
       {/* Desktop Navigation */}
