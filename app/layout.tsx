@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Icebreaker",
+  title: "Windmatrix",
   description: "Next-Generation Neuronic Intelligence Interface",
 };
 
