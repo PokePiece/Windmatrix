@@ -34,10 +34,10 @@ const Nav = () => {
         </Link>
         {/* Render a default state if authContext is unexpectedly null */}
         <div className="sm:flex hidden">
-          <Link href="/auth" className="black_btn">Sign In / Sign Up</Link>
+          <Link href="/bergs/auth" className="black_btn">Sign In / Sign Up</Link>
         </div>
         <div className="sm:hidden flex relative">
-          <Link href="/auth" className="black_btn">Sign In / Sign Up</Link>
+          <Link href="/bergs/auth" className="black_btn">Sign In / Sign Up</Link>
         </div>
       </nav>
     );
@@ -74,7 +74,7 @@ const Nav = () => {
           <div>Loading...</div>
         ) : user ? ( // User is logged in
           <div className="flex gap-3 md:gap-5">
-            <Link href="/create-intelligence" className="black_btn">
+            <Link href="/bergs/create-intelligence" className="black_btn">
               Create Intelligence
             </Link>
 
@@ -83,7 +83,7 @@ const Nav = () => {
             </button>
 
             {/* Link to user's profile based on their Supabase ID */}
-            <Link href={`/profile/${user.id}`}>
+            <Link href={`/bergs/profile/${user.id}`}>
               <Image
                 src={user.user_metadata?.avatar_url || '/assets/images/logo.svg'} // Use actual avatar if available, fallback to logo
                 width={37}
@@ -95,7 +95,7 @@ const Nav = () => {
           </div>
         ) : ( // User is not logged in
           <>
-            <Link href="/auth" className="black_btn">
+            <Link href="/bergs/auth" className="black_btn">
               Sign In / Sign Up
             </Link>
           </>
@@ -135,7 +135,7 @@ const Nav = () => {
                 */}
             </>
         ) : (
-            <Link href="/auth" className="black_btn">
+            <Link href="/bergs/auth" className="black_btn">
                 Sign In / Sign Up
             </Link>
         )}
