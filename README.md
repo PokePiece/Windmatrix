@@ -7,3 +7,7 @@ This is the Windmatrix, a neuronic intelligence interface platform. Here, use an
 To run, clone the repository, run 'npm run dev', and then 'npm i'.
 
 Open it up in localhost:3000 and it will appear.
+
+### License
+
+This is licensed under the MIT license.
