@@ -8,7 +8,7 @@ import Button from "./Button";
 import Link from "next/link";
 
 //const navItems = ["About", "Chat", "Speak", "Listen", "Write"];
-const navItems = ["Mints", "Chat",];
+const navItems = ["Ships", "Chat",];
 
 const NavBar = () => {
   // State for toggling audio and visual indicator
@@ -78,7 +78,7 @@ const NavBar = () => {
             <Link href='/'>
               <Button
                 id="product-button"
-                title="Main"
+                title="Windmatrix"
                 rightIcon={<TiLocationArrow />}
                 containerClass="bg-blue-50 md:flex hidden items-center justify-center gap-1"
               />

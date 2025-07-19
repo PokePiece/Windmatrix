@@ -27,10 +27,10 @@ const About = () => {
   });
 
   return (
-    <div id="mints" className="min-h-screen w-screen">
+    <div id="ships" className="min-h-screen w-screen">
       <div className="relative mb-8 mt-36 flex flex-col items-center gap-5">
         <p className="font-general text-sm uppercase md:text-[10px]">
-          Mints
+          Ships
         </p>
 
         <AnimatedTitle
